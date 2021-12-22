@@ -8,6 +8,7 @@
   /* Global colors */
   --global-color-text-alha: black;
   --global-color-text-betha: #1563d7;
+  --global-color-text-betha--100: #15a0d7;
   --global-color-background: #f3f5f9;
   --global-color-label: white;
 
@@ -191,6 +192,35 @@ input::placeholder {
 /*------------------------------------*\
   #OBJECTS
 \*------------------------------------*/
+/*
+  Object: Button reset
+  ---
+  Small button reset object
+*/
+
+.o-button-reset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
 /*
     Objects: Row
     ---
@@ -684,7 +714,7 @@ input::placeholder {
   border-radius: 8px;
   background-color: var(--global-color-label);
   height: px;
-  max-width: 48, 625em;
+  max-width: 48,625em;
   margin: 16px 0;
   display: flex;
   justify-content: center;
@@ -696,6 +726,14 @@ input::placeholder {
 
 .c-button__calculate:active {
   box-shadow: inset 0px 0px 5px #1951a5;
+}
+
+.c-button__calculate:hover {
+  background-color: var(--global-color-text-betha--100);
+}
+
+.c-button__calculate:focus {
+  background-color: var(--global-color-text-betha--100);
 }
 
 .c-label__change {

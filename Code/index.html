@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Calculator | Howest</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/screen.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <script src="script/app.js"></script>
+    <script src="script/dashboard-chart.js"></script>
+
+  </head>
+  <body>
+    <header class="o-row o-row--color o-row--header">
+        <div class="c-header">
+          <h5>Currency Calculator</h5>
+      </div>
+    </header>
+    <section class="o-row o-row--md">
+      <div class="o-container u-max-width-lg">
+        <div class="o-layout o-layout--gutter o-layout--justify-space-between">
+          <div class="o-layout__item o-layout--justify-center u-1-of-2-bp3">
+              <div class="c-label__money">
+                <input type="number" step="0.1" min="0" class="c-label__money--input js-money__input" />
+                <div class="c-label__money--item">
+                  <select class="c-input js-currency-input">
+                    <option value="eur">EUR</option>
+                    <option value="usd">USD</option>
+                    <option value="gbp">GBP</option>
+                  </select>
+                </div>
+              </div>
+          </div>
+            <div class="o-layout__item u-1-of-2-bp3">
+              <div class="c-label__money">
+                <input type="number" step="0.1" min="0" class="c-label__money--input js-money__output" />
+                <div class="c-label__money--item">
+                  <select class="c-input js-currency-output">
+                    <option value="eur">EUR</option>
+                    <option value="usd">USD</option>
+                    <option value="gbp">GBP</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="o-layout__item u-1-of-1-bp3">
+              <div class="c-label__change js-change">
+                <svg id="Component_1_1" class="c-symbol__change c-animation" data-name="Component 1 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+                  <defs>
+                    <linearGradient id="linear-gradient" x1="0.152" y1="0.151" x2="1.39" y2="1.576" gradientUnits="objectBoundingBox">
+                      <stop offset="0" stop-color="#1563d7"/>
+                      <stop offset="1" stop-color="#fff"/>
+                    </linearGradient>
+                  </defs>
+                  <circle id="Ellipse_1" data-name="Ellipse 1" cx="14" cy="14" r="14" fill="url(#linear-gradient)"/>
+                  <path id="Path_6" data-name="Path 6" d="M15.045,17.843V10.416H13.219v7.427h-2.74l3.653,4.227,3.653-4.227ZM8.653,3,5,7.227H7.74v7.427H9.566V7.227h2.74Zm6.392,14.843V10.416H13.219v7.427h-2.74l3.653,4.227,3.653-4.227ZM8.653,3,5,7.227H7.74v7.427H9.566V7.227h2.74Z" transform="translate(2.608 1.465)" fill="#fff"/>
+                </svg>
+                
+                <div class="c-label__change--currency js-change__output">1 EUR = 1.00 EUR</div>
+              </div>          
+          </div>
+            <div class="o-layout__item u-1-of-1-bp3">
+              <div class="c-button__calculate js-button">Calculate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="o-row o-row--md">
+      <div class="o-container u-max-width-lg">
+        <div class="c-card">
+          <div class="c-card__header">
+            <h2 class="c-card__title">Historical data</h2>
+            <span class="c-custom-select">
+              <select class="c-input c-custom-select__input js-currency-select" name="select1" id="select1">
+                <option value="eur">EUR</option>
+                <option value="GBP">GBP</option>
+              </select>
+              <svg class="c-custom-select__symbol"><use xlink:href="#c-icon_small-down"></use></svg>
+            </span>
+          </div>
+          <div class="c-card__body">
+            <canvas class="js-graph" width="4" height="2"></canvas>
+            <aside class="c-load-container js-load-container">
+              <!-- <p>Loading...</p> -->
+              <svg class="c-loader js-loader" viewbox="0 0 50 50">
+                <circle class="c-loader__circle"></circle>
+              </svg>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="o-row o-row--md">
+      <div class="o-container u-max-width-lg">
+        <div class="o-layout o-layout--gutter o-layout--justify-space-between js-compare">
+          <div class="o-layout__item u-1-of-2-bp3">
+            <div class="c-label__compare">
+              <div class="c-label__compare--item">
+                    EUR
+              </div>
+              <div class="c-label__compare--item">
+                <div class="c-column">
+                  <div>1,00</div>
+                  <div class="c-column__item--betha">0,88</div>
+              </div>
+            </div>
+          </div>     
+      </div>
+    </section>
+  </body>
+</html>

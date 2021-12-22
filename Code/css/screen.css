@@ -181,6 +181,7 @@ input {
 select {
   width: 100%;
   font-size: 14px;
+  background-color: white;
 }
 
 input::placeholder {
